@@ -1,0 +1,14 @@
+autoplot.knnForecast    Create a ggplot object from a knnForecast
+                        object
+knn_examples            Examples of the model associated with a
+                        prediction
+knn_forecasting         Time series forecasting using KNN regression
+n_training_examples     Number of training examples
+nearest_neighbors       Nearest neighbors associated with predictions
+plot.knnForecastRO      Plot a prediction of a test set
+predict.knnForecast     Predict method for KNN models for time series
+                        forecasting.
+rolling_origin          Assessing forecasting accuracy with rolling
+                        origin
+tsfknn                  tsfknn: A package for time series forecasting
+                        using KNN regression.

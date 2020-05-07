@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Subset of time series from the Time Series Data Library</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for subset.tsdl {tsdl}"><tr><td>subset.tsdl {tsdl}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Subset of time series from the Time Series Data Library</h2>
+
+<h3>Description</h3>
+
+<p><code>subset.tsdl</code> returns a subset of the time series data from
+the Time Series Data Library. Subsets can be for specific periods,
+or specific types of data or both.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S3 method for class 'tsdl'
+subset(x, cond1, cond2, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>TSDL data or a subset of TSDL data</p>
+</td></tr>
+<tr valign="top"><td><code>cond1, cond2</code></td>
+<td>
+<p>Optional conditions specifying subject (type) or frequency of the data.
+Character variable would be recognised as subject
+and numeric variable would be recognised as frequency. Positions are interchangeable.</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>Other arguments specifying conditions for where to search and what to search.
+</p>
+
+<dl>
+<dt><code>start</code></dt><dd><p>Numeric variable specifying starting year of the series.</p>
+</dd>
+<dt><code>description</code></dt><dd><p>String to be matched in the description attribute of the time series.</p>
+</dd>
+<dt><code>source</code></dt><dd><p>String to be matched in the source attribute of the time series.</p>
+</dd>
+</dl>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>See <code>unique(meta_tsdl$frequency)</code> for possible values
+for <code>cond1</code> and <code>cond2</code> denoting frequency.
+</p>
+<p>See <code>unique(meta_tsdl$subject)</code> for possible values
+for <code>cond1</code> and <code>cond2</code> denoting subject.
+</p>
+<p>Partial matching used for both conditions.
+</p>
+
+
+<h3>Value</h3>
+
+<p>An object of class <code>tsdl</code> consisting of the selected series.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Yangzhuoran Yang
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="tsdl.html">tsdl</a></code>
+</p>
+<p><code><a href="meta_tsdl.html">meta_tsdl</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+# Subset by frequency
+tsdl_quarterly &lt;- subset(tsdl,4)
+tsdl_quarterly
+
+# Subset by frequency and subject
+tsdl_daily_industry &lt;- subset(tsdl,12,"Industry")
+tsdl_daily_industry
+
+# Subset by source
+tsdl_abs &lt;- subset(tsdl, source = "Australian Bureau of Statistics")
+tsdl_abs
+
+# Subset by starting year
+tsdl_1948 &lt;- subset(tsdl, start = 1948)
+tsdl_1948
+
+# Subset by description
+tsdl_nettraffic &lt;- subset(tsdl, description = "Internet traffic")
+tsdl_nettraffic
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>tsdl</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

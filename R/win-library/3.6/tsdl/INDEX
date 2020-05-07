@@ -1,0 +1,5 @@
+meta_tsdl               Time Series Data Library metadata.
+subset.tsdl             Subset of time series from the Time Series Data
+                        Library
+tsdl                    Time Series Data Library data
+tsdl-package            Time Series Data Library

@@ -1,0 +1,10 @@
+tsfknn-package	tsfknn
+autoplot.knnForecast	autoplot.knnForecast
+knn_examples	knn_examples
+knn_forecasting	knn_forecasting
+nearest_neighbors	nearest_neighbors
+n_training_examples	n_training_examples
+plot.knnForecastRO	plot.knnForecastRO
+predict.knnForecast	predict.knnForecast
+rolling_origin	rolling_origin
+tsfknn	tsfknn
